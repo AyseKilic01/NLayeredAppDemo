@@ -52,15 +52,25 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
+    <Compile Include="Concrete\ProductManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Abstract\" />
-    <Folder Include="Concrete\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\NorthWind.DataAccess\NorthWind.DataAccess.csproj">
+      <Project>{19C3BCF2-D474-4FA4-93AE-308FA18149B6}</Project>
+      <Name>NorthWind.DataAccess</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NorthWind.Entities\NorthWind.Entities.csproj">
+      <Project>{7BAD091D-2907-4B04-B535-A93AEC22461C}</Project>
+      <Name>NorthWind.Entities</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
