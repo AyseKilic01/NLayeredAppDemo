@@ -259,3 +259,6 @@ paket-files/
 # Python Tools for Visual Studio (PTVS)
 __pycache__/
 *.pyc
+/NorthWind.DataAccess/App.config
+/NorthWind.Business/App.config
+/NorthWind.WebFormsUI/App.config
