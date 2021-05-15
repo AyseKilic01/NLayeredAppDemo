@@ -1,4 +1,5 @@
-﻿using NorthWind.Entities.Concrete;
+﻿using NorthWind.DataAccess.Abstract;
+using NorthWind.Entities.Concrete;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -9,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace NorthWind.DataAccess.Concrete
 {
-   public class ProductDAL
+   public class EfProductDAL:IProductDal
     {
         public List<Product> GetAll()
         {

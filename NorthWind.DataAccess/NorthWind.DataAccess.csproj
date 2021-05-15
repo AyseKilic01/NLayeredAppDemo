@@ -55,7 +55,8 @@
     <Compile Include="Abstract\IProductDal.cs" />
     <Compile Include="Class1.cs" />
     <Compile Include="Concrete\EntityFrame\NorthWindContext.cs" />
-    <Compile Include="Concrete\EntityFrame\ProductDAL.cs" />
+    <Compile Include="Concrete\EntityFrame\EfProductDAL.cs" />
+    <Compile Include="Concrete\NHibernate\NhProductDAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />
