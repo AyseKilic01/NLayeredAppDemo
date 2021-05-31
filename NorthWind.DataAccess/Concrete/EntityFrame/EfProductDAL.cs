@@ -5,12 +5,11 @@ using System.Collections.Generic;
 using System.Data;
 using System.Data.Entity;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Linq.Expressions;
 
 namespace NorthWind.DataAccess.Concrete
 {
-   public class EfProductDAL:IProductDal
+    public class EfProductDAL:IProductDal
     {
         public List<Product> GetAll()
         {
@@ -71,6 +70,14 @@ namespace NorthWind.DataAccess.Concrete
                 // return context.Products.SingleOrDefault(x => x.ID == id);
                 //tabloda eğer gönderilen id varsa veri çek yoksa default null gönder firstordefault
                 //tabloda eğer gönderilen id birden fazla ise sadece bir veriyi çek yoksa default null gönder singleordefault
+            }
+        }
+
+        public List<Product> GetAll(Expression<Func<Product, bool>> filter = null)
+        {
+            using (NorthWindContext context = new NorthWindContext())
+            {
+                return context.Products.ToList();
             }
         }
     }

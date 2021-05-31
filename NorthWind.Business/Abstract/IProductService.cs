@@ -5,9 +5,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NorthWind.DataAccess.Abstract
+namespace NorthWind.Business.Abstract
 {
-    public interface IProductDal : IRepository<Product>
-    { 
+    public interface IProductService
+    {
+       List<Product> GetAll();
     }
 }

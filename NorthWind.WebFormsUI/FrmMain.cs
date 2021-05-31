@@ -1,4 +1,5 @@
-﻿using NorthWind.Business.Concrete;
+﻿using NorthWind.Business.Abstract;
+using NorthWind.Business.Concrete;
 using NorthWind.DataAccess.Concrete;
 using System;
 using System.Collections.Generic;
@@ -14,15 +15,18 @@ namespace NorthWind.WebFormsUI
 {
     public partial class FrmMain : Form
     {
+        private IProductService _managerservice;
         public FrmMain()
         {
             InitializeComponent();
+            _managerservice = new ProductManager(new EfProductDAL());
         }
 
         private void FrmMain_Load(object sender, EventArgs e)
         {
-            ProductManager _manager = new ProductManager(new EfProductDAL());
-            dgwProduct.DataSource = _manager.GetAll();
+
+            for (int i = 0; i <= 500; i++)
+            dgwProduct.DataSource = _managerservice.GetAll();
         }
     }
 }

@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NorthWind.DataAccess
+namespace NorthWind.Entities.Abstract
 {
-    public class Class1
+   public interface IEntity
     {
     }
 }

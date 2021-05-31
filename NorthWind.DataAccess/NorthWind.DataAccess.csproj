@@ -53,7 +53,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Abstract\IProductDal.cs" />
-    <Compile Include="Class1.cs" />
+    <Compile Include="Abstract\IRepository.cs" />
     <Compile Include="Concrete\EntityFrame\NorthWindContext.cs" />
     <Compile Include="Concrete\EntityFrame\EfProductDAL.cs" />
     <Compile Include="Concrete\NHibernate\NhProductDAL.cs" />
